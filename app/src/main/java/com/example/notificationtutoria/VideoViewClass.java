@@ -16,6 +16,7 @@ String videoUrl;
        // videoView=findViewById(R.id.myVideoView);
         videoUrl=getIntent().getStringExtra("videoUrl");
         playVideo();
+        //yrrre
     }
 
     private void playVideo(){
