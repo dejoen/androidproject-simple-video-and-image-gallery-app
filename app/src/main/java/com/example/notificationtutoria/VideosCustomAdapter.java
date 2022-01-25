@@ -1,6 +1,7 @@
 package com.example.notificationtutoria;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaMetadataRetriever;
@@ -54,6 +55,12 @@ public static String TAG="";
 
         Glide.with(context).asBitmap().load(videos.get(position))
                 .apply(options).into(holder.videoView);
+
+        holder.itemView.setOnClickListener(View->{
+            Intent intent=new Intent(context,VideoViewClass.class);
+            intent.putExtra("videoUrl",videos.get(position));
+            context.startActivity(intent);
+        });
 
     }
 
